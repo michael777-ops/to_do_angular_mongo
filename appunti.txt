@@ -1,0 +1,4 @@
+ng new my-app
+ng serve --open
+ng generate component (nome)
+ng generate service(nome)

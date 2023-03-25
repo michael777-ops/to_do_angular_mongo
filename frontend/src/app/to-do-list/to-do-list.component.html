@@ -1,0 +1,14 @@
+<ul>
+    <h3>List</h3>
+    <li *ngFor='let toDo of toDoList' class="" (click)="selectTodo($event)">
+        <p class="id">{{toDo._id}}</p>
+        {{toDo.title}} <br>
+        {{toDo.description}}
+    </li>
+    <fa-icon id="plus" [icon]="['fas', 'plus']" size="lg" (click)="addToDo()"></fa-icon>
+    <fa-icon id="plus" [icon]="['fas', 'trash']" size="lg" (click)="deleteTodo()"></fa-icon>
+    <div>
+        <input id='title' [(ngModel)]='newToDo.title' placeholder="title" />
+        <textarea id='description' [(ngModel)]='newToDo.description' placeholder="description" rows="4"></textarea>
+    </div>
+</ul>
